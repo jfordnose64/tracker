@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ReactMapGL, { Popup, NavigationControl, Marker } from 'react-map-gl'
+import ReactMapGL, { NavigationControl, Marker } from 'react-map-gl'
 const TOKEN =
   'pk.eyJ1IjoiamZvcmQwMCIsImEiOiJjazBwYXlyajUwM3hvM2ltdmNweWIwbHc0In0.edXl14jNwhLjY1c-nasHag'
 const navStyle = {
