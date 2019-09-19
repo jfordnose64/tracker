@@ -9,4 +9,59 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+  text-align: center;
+}
+
+article {
+  margin: 1rem;
+  border-radius: 0.3rem;
+}
+
+label {
+  padding: 1rem;
+}
+
+input,
+button {
+  border-radius: 0.3rem;
+}
+
+select:hover,
+button:hover {
+  cursor: pointer;
+}
+
+.map-input {
+  display: flex;
+  justify-content: start;
+  margin: 1rem;
+}
+
+.submit-form {
+  background-color: gray;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+.pot-header {
+  font-size: 3rem;
+  padding: 1rem;
+  margin: 0rem;
+}
+
+.follow-me {
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  padding: 0.5rem;
+}
+
+.header {
+  text-align: start;
+  background-color: grey;
+  padding-left: 1rem;
+  margin: 0rem;
 }
