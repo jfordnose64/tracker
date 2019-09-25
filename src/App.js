@@ -3,6 +3,7 @@ import Map from './components/Map'
 import InputField from './components/InputField'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import MarkerMap from './components/MarkerMap'
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
           <Map />
           <section>
             <InputField />
+            <MarkerMap />
           </section>
         </div>
         <Footer />

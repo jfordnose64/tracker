@@ -65,3 +65,26 @@ h3 {
   padding-left: 1rem;
   margin: 0rem;
 }
+
+.card-header {
+  padding: 0rem;
+  margin: 0rem;
+}
+
+.footer-icons {
+  font-size: 3rem;
+  padding: 0rem 1.5rem;
+  margin: 1rem 0rem;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.footer-icons:hover {
+  color: black;
+  font-size: 4rem;
+  margin: 0rem;
+}
