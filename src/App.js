@@ -1,24 +1,25 @@
 import React, { Component } from 'react'
 import Map from './components/Map'
-import InputField from './components/InputField'
-import Header from './components/Header'
 import Footer from './components/Footer'
-import MarkerMap from './components/MarkerMap'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import MoreAddressInfo from './components/MoreAddressInfo'
+import HomePage from './components/HomePage'
 
 class App extends Component {
   render() {
     return (
-      <section>
-        <Header />
-        <div className="map-input">
-          <Map />
-          <section>
-            <InputField />
-            <MarkerMap />
-          </section>
-        </div>
-        <Footer />
-      </section>
+      <Router>
+        <section>
+          <Switch>
+            <Route
+              exact
+              path="/Pothole/:selectedAddress"
+              component={MoreAddressInfo}
+            />
+            <Route exact path="/" component={HomePage} />
+          </Switch>
+        </section>
+      </Router>
     )
   }
 }

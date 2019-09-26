@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Axios from 'axios'
 
 const InputField = () => {
@@ -17,8 +17,14 @@ const InputField = () => {
   const postData = async () => {
     const resp = await Axios.post('https://localhost:5001/api/Pothole', {
       latitude,
-      longitude
+      longitude,
+      damage
     })
+    console.log('submitted')
+  }
+
+  const refreshPage = () => {
+    window.location.reload(false)
   }
 
   return (
@@ -28,7 +34,10 @@ const InputField = () => {
         <article className="lat-input">
           <label>Latitude</label>
           <input
-            type="number"
+            type="double"
+            step="any"
+            max="90"
+            min="-90"
             value={latitude}
             onChange={e => {
               setNewLatitude(e.target.value)
@@ -38,7 +47,10 @@ const InputField = () => {
         <article className="long-input">
           <label>Longitude</label>
           <input
-            type="number"
+            type="double"
+            step="any"
+            max="180"
+            min="-180"
             value={longitude}
             onChange={e => {
               setNewLongitude(e.target.value)
@@ -58,7 +70,7 @@ const InputField = () => {
             <option></option>
           </select>
         </article>
-        <button>Submit</button>
+        <button onClick={refreshPage}>Submit</button>
       </form>
     </div>
   )
